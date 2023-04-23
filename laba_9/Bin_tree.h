@@ -11,7 +11,7 @@ struct branch {
 	branch* right;
 };
 
-void Make_tree(branch** root, int n, bool fl);
+void Make_tree(branch** root, int n);
 void Print_in_order(branch* root, int level);
 void Simm_print_1(branch* root, int level);
 void Simm_print_2(branch* root, int level);

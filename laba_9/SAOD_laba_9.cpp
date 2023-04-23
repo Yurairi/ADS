@@ -23,7 +23,7 @@ void main_menu() {
 			cout << "Введите колличество вершин: \n";
 			int num = input_for_menu(0);
 			Delete(tree);
-			Make_tree(&tree, num, 1);
+			Make_tree(&tree, num);
 		}
 		if (choise == 2) {
 			Print_in_order(tree, 0); 

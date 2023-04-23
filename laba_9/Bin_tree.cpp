@@ -1,6 +1,6 @@
 #include"Bin_tree.h"
 
-void Make_tree(branch** root, int n, bool fl) {
+void Make_tree(branch** root, int n) {
 	if (n > 0) {
 		int data_n = rand() % 100;
 
@@ -10,8 +10,8 @@ void Make_tree(branch** root, int n, bool fl) {
 		branch* new_b = new branch;
 		new_b->data = data_n;
 		new_b->left = new_b->right = nullptr;
-		Make_tree(&(new_b->left), left, 0);
-		Make_tree(&(new_b->right), right, 0);
+		Make_tree(&(new_b->left), left);
+		Make_tree(&(new_b->right), right);
 		*root = new_b;
 	}
 }
