@@ -2,7 +2,7 @@
 
 int main()
 {
-	system("chcp 1251");
+	system("UTF");
 	setlocale(LC_ALL, "Russian");
 	menu();
 	return 0;
