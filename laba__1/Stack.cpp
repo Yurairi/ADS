@@ -52,7 +52,7 @@ void print_state(stack* head) {
     stack* per = head;
     int n = 1;
     while (per) {
-        cout << "Çíà÷åíèå " << n << " ıëåìåíòà: ";
+        cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ " << n << " ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°: ";
         cout << per->data << "\n";
         per = per->next;
         n++;
