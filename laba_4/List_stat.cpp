@@ -10,7 +10,7 @@ bool Is_Full(List l) {
 
 void Add_elem(List* l, int num_data) {
 	if (Is_Full(*l)) {
-		cout << "Ñïèñîê çàïîëíåí. Äîáàâëåíèå íåâîçìîæíî. \n";
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½. Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½ÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾. \n";
 	}
 	if (!Is_Full(*l) && !Is_Empty(*l)) {
 		int numb = 0;
@@ -38,11 +38,11 @@ int Finder(List l, int num_data) {
 void List_status(List l) {
 	if (!Is_Empty(l)) {
 		for (int i = 0; i < l.count; i++) {
-			cout << i + 1 << " ýëåìåíò = " << l.data[i] << "\n";
+			cout << i + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ = " << l.data[i] << "\n";
 		}
 	}
 	else {
-		cout << "Ñïèñîê ïóñò. \n";
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚. \n";
 	}
 }
 
@@ -53,6 +53,6 @@ void Delete_elem(List* l, int num_data) {
 		l->count--;
 	}
 	else {
-		cout << "Çàäàííîãî ýëåìåíòà íåò. Óäàëåíèå íå âîçìîæíî. \n";
+		cout << "Ð—Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½ÐµÑ‚. Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð½Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾. \n";
 	}
 }

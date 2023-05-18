@@ -61,7 +61,7 @@ void Delete_elem(LinkedList* l, Node* num) {
 		l->count--;
 	}
 	else {
-		cout << "Çàäàííîãî ýëåìåíòà íåò. Óäàëåíèå íå âîçìîæíî. \n";
+		cout << "Ð—Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½ÐµÑ‚. Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð½Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾. \n";
 	}
 }
 
@@ -86,7 +86,7 @@ void Move_elem(LinkedList* l, LinkedList* extr, Node* num) {
 		extr->count++;
 	}
 	else {
-		cout << "Çàäàííîãî ýëåìåíòà íåò. Óäàëåíèå íå âîçìîæíî. \n";
+		cout << "Ð—Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½ÐµÑ‚. Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð½Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾. \n";
 	}
 }
 
@@ -95,13 +95,13 @@ void List_status(LinkedList l) {
 		Node* i = l.head;
 		int co = 1;
 		while (i->next != nullptr) {
-			cout << co << " ýëåìåíò = " << i->data << "\n";
+			cout << co << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ = " << i->data << "\n";
 			i = i->next;
 			co++;
 		}
-		cout << co << " ýëåìåíò = " << i->data << "\n";
+		cout << co << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ = " << i->data << "\n";
 	}
 	else {
-		cout << "Ñïèñîê ïóñò. \n";
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚. \n";
 	}
 }

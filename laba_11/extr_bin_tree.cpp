@@ -40,14 +40,14 @@ void Add_data(branch** root, int data_n) {
 	new_b->left = new_b->right = nullptr;
 	
 	if (*root != nullptr) {
-		cout << "Введите значение, после которого необходимо произвести добавление:" << '\n';
+		cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ, РїРѕСЃР»Рµ РєРѕС‚РѕСЂРѕРіРѕ РЅРµРѕР±С…РѕРґРёРјРѕ РїСЂРѕРёР·РІРµСЃС‚Рё РґРѕР±Р°РІР»РµРЅРёРµ:" << '\n';
 		int f_data = input_for_menu(0);
 		branch* node = Finder(*root, f_data);
 		if (node != nullptr) {
 			branch* right = node->right;
 			branch* left = node->left;
 			if (right != nullptr && left != nullptr) {
-				cout << "Добавление не возможно. Дерево имеет максимальное число потомков." << '\n';
+				cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РЅРµ РІРѕР·РјРѕР¶РЅРѕ. Р”РµСЂРµРІРѕ РёРјРµРµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РїРѕС‚РѕРјРєРѕРІ." << '\n';
 			}
 			else if (right == nullptr && left != nullptr) {
 				node->right = new_b;
@@ -56,14 +56,14 @@ void Add_data(branch** root, int data_n) {
 				node->left = new_b;
 			}
 			else if (left == nullptr && right == nullptr) {
-				cout << "Добавить правого потомка - 1, левого - 0" << '\n';
+				cout << "Р”РѕР±Р°РІРёС‚СЊ РїСЂР°РІРѕРіРѕ РїРѕС‚РѕРјРєР° - 1, Р»РµРІРѕРіРѕ - 0" << '\n';
 				int num = input_for_menu(2);
 				if (num) { node->right = new_b; }
 				else { node->left = new_b; }
 			}
 		}
 		else {
-			cout << "Такого значения нет." << '\n';
+			cout << "РўР°РєРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РЅРµС‚." << '\n';
 		}	
 	}
 	else {

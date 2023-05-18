@@ -20,7 +20,7 @@ int Finder(LinkedList l, int data, int fl) {
 						ii = ii->next;
 						co++;
 					}
-					cout << "Ýëåìåíò íàéäåí â ñïèñêå " << cnt << ". Åãî èíäåêñ = " << co << "\n";
+					cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ Ð½Ð°Ð¹Ð´ÐµÐ½ Ð² ÑÐ¿Ð¸ÑÐºÐµ " << cnt << ". Ð•Ð³Ð¾ Ð¸Ð½Ð´ÐµÐºÑ = " << co << "\n";
 				}
 				rett = 1;
 				break; 
@@ -35,17 +35,17 @@ int Finder(LinkedList l, int data, int fl) {
 void Add_elem_1(DLList *l) {
 	int fl = 1, ind = 0;
 	Node* num_ind = l->head;
-	cout << "Ââåäèòå çíà÷åíèå, êîòîðîå íåîáõîäèìî äîáàâèòü: \n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ: \n";
 	int num = input_for_menu(0);
 	if (!Is_Empty(*l)) {
-		cout << "Ââåäèòå çíà÷åíèå, ïîñëå èëè äî êîòîðîãî íåîáõîäèìî äîáàâèòü: \n";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð¿Ð¾ÑÐ»Ðµ Ð¸Ð»Ð¸ Ð´Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ: \n";
 		int datal = input_for_menu(0);
 		if (Finder_head(*l, datal) == nullptr) {
-			cout << "Òàêîãî çíà÷åíèÿ íåò: \n";
+			cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ð½ÐµÑ‚: \n";
 			fl = 0;
 		}
 		else {
-			cout << "Äîáàâëåíèå äî - 0; äîáàâëåíèå ïîñëå - 1\n";
+			cout << "Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð´Ð¾ - 0; Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾ÑÐ»Ðµ - 1\n";
 			ind = input_for_menu(2);
 			num_ind = Finder_head(*l, datal);
 		}
@@ -58,12 +58,12 @@ void Add_elem_1(DLList *l) {
 void Add_node(LinkedList* list) {
 	int ch = 1;
 	if (!Is_Empty(*list)) {
-		cout << "Ñîçäàòü ñïèñîê - 1; äîáàâèòü ýëåìåíò â ñóùåòñâóþùèé ñïèñîê - 0:\n";
+		cout << "Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ ÑÐ¿Ð¸ÑÐ¾Ðº - 1; Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² ÑÑƒÑ‰ÐµÑ‚ÑÐ²ÑƒÑŽÑ‰Ð¸Ð¹ ÑÐ¿Ð¸ÑÐ¾Ðº - 0:\n";
 		ch = input_for_menu(2);
 	}
 	if (ch) {
 		Node_2* elem = new Node_2;
-		cout << "Ââåäèòå id ñïèñêà:\n";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ id ÑÐ¿Ð¸ÑÐºÐ°:\n";
 		int id = input_for_menu(0);
 		elem->id = id;
 		elem->next = nullptr;
@@ -73,7 +73,7 @@ void Add_node(LinkedList* list) {
 			list->head = elem;
 		}
 		else {
-			cout << "Ââåäèòå id ñïèñêà ïîñëå èëè äî êîòîðîãî íåîáõîäèìî äîáàâèòü íîâûé ñïèñîê:\n";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ id ÑÐ¿Ð¸ÑÐºÐ° Ð¿Ð¾ÑÐ»Ðµ Ð¸Ð»Ð¸ Ð´Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð½Ð¾Ð²Ñ‹Ð¹ ÑÐ¿Ð¸ÑÐ¾Ðº:\n";
 			int id_2 = input_for_menu(0);
 			Node_2* repl_1 = list->head;
 			Node_2* repl = nullptr;
@@ -85,7 +85,7 @@ void Add_node(LinkedList* list) {
 				repl_1 = repl_1->next; 
 			}
 			if (repl != nullptr) {
-				cout << "Äîáàâëåíèå äî - 0; äîáàâëåíèå ïîñëå - 1\n";
+				cout << "Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð´Ð¾ - 0; Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾ÑÐ»Ðµ - 1\n";
 				int ind = input_for_menu(2);
 				if (repl == list->head && !ind) {
 					elem->next = list->head;
@@ -102,13 +102,13 @@ void Add_node(LinkedList* list) {
 				}
 			}
 			else {
-				cout << "Ñïèñêà ñ òàêèì id íåò.\n";
+				cout << "Ð¡Ð¿Ð¸ÑÐºÐ° Ñ Ñ‚Ð°ÐºÐ¸Ð¼ id Ð½ÐµÑ‚.\n";
 			}
 		}
 		list->count++;
 	}
 	else {
-		cout << "Ââåäèòå id ñïèñêà â êîòîðûé íåîáõîäèìî äîáàâèòü ýëåìåíò:\n";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ id ÑÐ¿Ð¸ÑÐºÐ° Ð² ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚:\n";
 		int id_2 = input_for_menu(0);
 		Node_2* repl_1 = list->head;
 		Node_2* repl = nullptr;
@@ -120,7 +120,7 @@ void Add_node(LinkedList* list) {
 			repl_1 = repl_1->next;
 		}
 		if (repl == nullptr) {
-			cout << "Ñïèñêà ñ òàêèì id íåò.\n";
+			cout << "Ð¡Ð¿Ð¸ÑÐºÐ° Ñ Ñ‚Ð°ÐºÐ¸Ð¼ id Ð½ÐµÑ‚.\n";
 		}
 		else {
 			Add_elem_1(repl->data);
@@ -167,21 +167,21 @@ void Delete_node(LinkedList* list, int id_2) {
 		list->count--;
 	}
 	else {
-		cout << "Ñïèñêà ñ òàêèì íîìåðîì íåò. Óäàëåíèå íå âîçìîæíî. \n";
+		cout << "Ð¡Ð¿Ð¸ÑÐºÐ° Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð¼ Ð½ÐµÑ‚. Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð½Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾. \n";
 	}
 }
 
 void Delete_elem_1(LinkedList* list) {
-	cout << "Ââåäèòå íîìåð ñïèñêà èç êîòîðîãî íåîáõîäèìî óäàëèòü ýëåìåíò\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ° Ð¸Ð· ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚\n";
 	int id_2 = input_for_menu(0);
 	Node_2* num = list->head;
 	while (num->next != nullptr) {
 		if (num->id == id_2) { break; }
 		num = num->next;
 	}
-	if (Is_Empty(*(num->data))) { cout << "Ñïèñîê ïóñò. \n"; }
+	if (Is_Empty(*(num->data))) { cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚. \n"; }
 	else {
-		cout << "Ââåäèòå çíà÷åíèå, êîòîðîå íåîáõîäèìî óäàëèòü: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ: ";
 		int nu = input_for_menu(0);
 		Delete_elem(num->data, Finder_head(*(num->data), nu));
 	}
@@ -191,13 +191,13 @@ void List_status(LinkedList l) {
 	if (!Is_Empty(l)) {
 		Node_2* i = l.head;
 		while (i != nullptr) {
-			cout << "Ñïèñîê " << i->id << '\n';
+			cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº " << i->id << '\n';
 			List_status_head(*(i->data));
 			i = i->next;
 		}
 	}
 	else {
-		cout << "Ñïèñîê ñïèñêîâ ïóñò. \n";
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÐ¿Ð¸ÑÐºÐ¾Ð² Ð¿ÑƒÑÑ‚. \n";
 	}
 }
 
@@ -207,15 +207,15 @@ int input_for_menu(int stat) {
 	{
 		cin.clear();
 		while (cin.get() != '\n') {
-			cout << "Ïîâòîðèòå ââîä :" << endl;
+			cout << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ :" << endl;
 		}
 	}
 	if (stat == 1 && (choise > 6 || choise < 0)) {
-		cout << "Ïîâòîðèòå ââîä :" << endl;
+		cout << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ :" << endl;
 		choise = input_for_menu(1);
 	}
 	if (stat == 2 && choise != 1 && choise != 0) {
-		cout << "Ïîâòîðèòå ââîä :" << endl;
+		cout << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ :" << endl;
 		choise = input_for_menu(2);
 	}
 	return choise;

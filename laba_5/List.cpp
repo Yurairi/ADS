@@ -70,7 +70,7 @@ void Delete_elem(List* l, int num_data) {
 		if (l->count == 0) { l->head = 0; }
 	}
 	else {
-		cout << "Çàäàííîãî ıëåìåíòà íåò. Óäàëåíèå íå âîçìîæíî. \n";
+		cout << "Ğ—Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ½ĞµÑ‚. Ğ£Ğ´Ğ°Ğ»ĞµĞ½Ğ¸Ğµ Ğ½Ğµ Ğ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ğ¾. \n";
 	}
 }
 
@@ -78,14 +78,14 @@ void List_status(List l) {
 	if (!Is_Empty(l)) {
 		int i = l.head, co = 1;
 		while (l.elem[i].next != -1) {
-			cout << co << " ıëåìåíò = " << l.elem[i].data <<  "\n";
+			cout << co << " ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ = " << l.elem[i].data <<  "\n";
 			i = l.elem[i].next;
 			co++;
 		}
-		cout << co << " ıëåìåíò = " << l.elem[i].data << "\n";
+		cout << co << " ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ = " << l.elem[i].data << "\n";
 	}
 	else {
-		cout << "Ñïèñîê ïóñò. \n";
+		cout << "Ğ¡Ğ¿Ğ¸ÑĞ¾Ğº Ğ¿ÑƒÑÑ‚. \n";
 	}
 }
 

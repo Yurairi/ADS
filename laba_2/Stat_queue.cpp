@@ -15,7 +15,7 @@ void add_elem(stat_queue *queue, int num_data) {
 		queue->count++;
 	}
 	else {
-		cout << "Î÷åğåäü çàïîëíåíà. Äîáàâëåíèå íåâîçìîæíî. \n";
+		cout << "ĞÑ‡ĞµÑ€ĞµĞ´ÑŒ Ğ·Ğ°Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ°. Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ğµ Ğ½ĞµĞ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ğ¾. \n";
 	}
 }
 
@@ -25,7 +25,7 @@ void delete_elem(stat_queue *queue) {
 		queue->count--;
 	}
 	else {
-		cout << "Î÷åğåäü ïóñòàÿ. Óäàëåíèå íåâîçìîæíî. \n";
+		cout << "ĞÑ‡ĞµÑ€ĞµĞ´ÑŒ Ğ¿ÑƒÑÑ‚Ğ°Ñ. Ğ£Ğ´Ğ°Ğ»ĞµĞ½Ğ¸Ğµ Ğ½ĞµĞ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ğ¾. \n";
 	}
 }
 
@@ -33,16 +33,16 @@ void queue_status(stat_queue queue) {
 	if (!Is_Empty(queue)) {
 		int num = 1;
 		int i = queue.head;
-		cout << num << " ıëìåíåò = " << queue.data[i] << "\n";
+		cout << num << " ÑĞ»Ğ¼ĞµĞ½ĞµÑ‚ = " << queue.data[i] << "\n";
 		num++;
 		i = (i + 1) % MAX;
 		while (i != queue.tail) {
-			cout << num << " ıëìåíåò = " << queue.data[i] << "\n";
+			cout << num << " ÑĞ»Ğ¼ĞµĞ½ĞµÑ‚ = " << queue.data[i] << "\n";
 			num++;
 			i = (i + 1) % MAX;
 		}
 	}
 	else {
-		cout << "Î÷åğåäü ïóñòàÿ. \n";
+		cout << "ĞÑ‡ĞµÑ€ĞµĞ´ÑŒ Ğ¿ÑƒÑÑ‚Ğ°Ñ. \n";
 	}
 }

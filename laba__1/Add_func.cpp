@@ -6,15 +6,15 @@ int input_for_menu(int stat) {
 	{
 		cin.clear();
 		while (cin.get() != '\n') {
-			cout << "Ïîâòîğèòå ââîä :" << endl;
+			cout << "ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´ :" << endl;
 		}
 	}
 	if (stat == 1 && (choise > 5 || choise < 0)) {
-		cout << "Ïîâòîğèòå ââîä :" << endl;
+		cout << "ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´ :" << endl;
 		choise = input_for_menu(1);
 	}
 	if (stat == 2 && choise != 1 && choise != 0) {
-		cout << "Ïîâòîğèòå ââîä :" << endl;
+		cout << "ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´ :" << endl;
 		choise = input_for_menu(2);
 	}
 	return choise;

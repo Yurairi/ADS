@@ -19,7 +19,7 @@ void add_elem(dyn_que* qu, char num_data) {
 
 void delete_elem(dyn_que* qu) {
 	if (Is_Empty(*qu)) {
-		cout << "Î÷åðåäü ïóñòàÿ. Óäàëåíèå íåâîçìîæíî. \n";
+		cout << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿ÑƒÑÑ‚Ð°Ñ. Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð½ÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾. \n";
 	}
 	else {
 		que_elem* temp = qu->head;
@@ -33,11 +33,11 @@ void queue_status(dyn_que qu) {
 	if (!Is_Empty(qu)) {
 		que_elem* temp = qu.head;
 		for (int i = 1; i < qu.count + 1; i++) {
-			cout << i << " ýëìåíåò = " << temp->data << "\n";
+			cout << i << " ÑÐ»Ð¼ÐµÐ½ÐµÑ‚ = " << temp->data << "\n";
 			temp = temp->next;
 		}
 	}
 	else {
-		cout << "Î÷åðåäü ïóñòàÿ. \n";
+		cout << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿ÑƒÑÑ‚Ð°Ñ. \n";
 	}
 }

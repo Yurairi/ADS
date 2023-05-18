@@ -79,7 +79,7 @@ void Delete_elem(DLList* l, Node* num) {
 		l->count--;
 	}
 	else {
-		cout << "Çàäàííîãî ıëåìåíòà íåò. Óäàëåíèå íå âîçìîæíî. \n";
+		cout << "Ğ—Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ½ĞµÑ‚. Ğ£Ğ´Ğ°Ğ»ĞµĞ½Ğ¸Ğµ Ğ½Ğµ Ğ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ğ¾. \n";
 	}
 }
 
@@ -88,7 +88,7 @@ void List_status_head(DLList l) {
 		Node* i = l.head;
 		int co = 1;
 		while (co - 1 != l.count) {
-			cout << co << " ıëåìåíò = " << i->data << "\n";
+			cout << co << " ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ = " << i->data << "\n";
 			i = i->next;
 			co++;
 		}
@@ -100,7 +100,7 @@ void List_status_tail(DLList l) {
 		Node* i = l.head->prev;
 		int co = 1;
 		while (co - 1 != l.count) {
-			cout << co << " ıëåìåíò = " << i->data << "\n";
+			cout << co << " ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ = " << i->data << "\n";
 			i = i->prev;
 			co++;
 		}
