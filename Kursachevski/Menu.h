@@ -12,5 +12,9 @@ public:
 	int Input_for_menu(int stat);
 	void M_delete_sect(Stock* st);
 	void M_delete_box(Stock* st);
+	void M_Fprint_status(Stock* st);
+	void M_Fadd_stock(Stock* st);
+	void M_destroy(Stock* st);
+	void M_add_name(Stock* st);
 	void Start();
 };

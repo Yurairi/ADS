@@ -72,7 +72,7 @@ void Section::Section_status() {
 
 		std::cout <<"Всего ячеек в секции: " << count << "\n";
 		for (int i = 1; i < count + 1; i++) {
-			std::cout << i << " ячейка = " << temp->Get_id() << " Заполненность = ";
+			std::cout << " ячейка № " << temp->Get_id() << " Состояние = ";
 			if (temp->Get_occupancy()) std::cout << "заполнена \n";
 			else  std::cout << "не заполнена \n";
 			temp = temp->Get_next();

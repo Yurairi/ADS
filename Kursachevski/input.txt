@@ -1,0 +1,13 @@
+Stock name: RTgW
+Section count: 5
+Section numbers: 1 2 3 4 5
+Box count for 1: 2
+Box numbers and status for 1: 1-1 2-0
+Box count for 2: 3
+Box numbers and status for 2: 1-1 2-0 3-0
+Box count for 3: 2
+Box numbers and status for 3: 1-1 2-0
+Box count for 4: 5
+Box numbers and status for 4: 1-1 2-0 3-1 4-1 5-0
+Box count for 5: 1
+Box numbers and status for 5: 1-0

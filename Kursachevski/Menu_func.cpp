@@ -1,16 +1,20 @@
 #include"Menu.h"
 
 void Menu::Text_menu() {
-	std::cout<< "Выберете необходимое действие\n";
-	std::cout<< "1. Вывести состояние склада\n";
-	std::cout<< "2. Вывести состояние секции с заданным номером\n";
-	std::cout<< "3. Вывести состояние ячейки с заданным номером и заданной секцией\n";
-	std::cout<< "4. Добавить секцию\n";
-	std::cout<< "5. Добавить ячейку в заданную секцию\n";
-	std::cout<< "6. Удалить секцию\n";
-	std::cout<< "7. Удалить ячейку в заданной секции\n";
-	std::cout<< "0. Завершить работу программы\n";
-	std::cout<< "Ввод: ";
+	std::cout << "Выберете необходимое действие\n";
+	std::cout << "1. Вывести состояние склада\n";
+	std::cout << "2. Вывести состояние секции с заданным номером\n";
+	std::cout << "3. Вывести состояние ячейки с заданным номером и заданной секцией\n";
+	std::cout << "4. Добавить секцию\n";
+	std::cout << "5. Добавить ячейку в заданную секцию\n";
+	std::cout << "6. Удалить секцию\n";
+	std::cout << "7. Удалить ячейку в заданной секции\n";
+	std::cout << "8. Заполнить данными из файла\n";
+	std::cout << "9. Вывести текущее состояние в файл\n";
+	std::cout << "10. Удалить все данные о складе\n";
+	std::cout << "11. Добавить наименование склада\n";
+	std::cout << "0. Завершить работу программы\n";
+	std::cout << "Ввод: ";
 }
 
 void Menu::Print_stock_status(Stock* st){
@@ -38,7 +42,7 @@ void Menu::Print_box_status(Stock* st) {
 		Section* sec = st->Ret_section(sect_id);
 		std::cout << "Введите номер ячейки\n";
 		int bx_id = Input_for_menu(0);
-		if (sec->Find_box(bx_id) != 0) {
+		if (sec->Find_box(bx_id) != -1) {
 			Box* bx = sec->Ret_box(bx_id);
 			std::cout << "Текущее состояние указанной ячейки: \n";
 			if (bx->Get_occupancy()) std::cout << "Ячейка заполнена \n";
@@ -57,7 +61,7 @@ void Menu::Print_box_status(Stock* st) {
 void Menu::M_add_sect(Stock* st) {
 	std::cout << "Введите номер секции, которую необходимо добавить: \n";
 	int new_id = Input_for_menu(0);
-	st->Add_section(new_id);
+	st->Add_section(new_id, 0);
 }
 
 void Menu::M_add_box(Stock* st) {
@@ -105,8 +109,37 @@ void Menu::Start(){
 		else if (ch == 5) M_add_box(&st);
 		else if (ch == 6) M_delete_sect(&st);
 		else if (ch == 7) M_delete_box(&st);
+		else if (ch == 8) M_Fadd_stock(&st);
+		else if (ch == 9) M_Fprint_status(&st);
+		else if (ch == 10) M_destroy(&st);
+		else if (ch == 11) M_add_name(&st);
 		else if (ch == 0) break;
 	}
+}
+
+void Menu::M_add_name(Stock* st) {
+	std::string nm;
+	std::cout << "Введите наименование склада: " << std::endl;
+	std::cin >> nm;
+	st->Set_name(nm);
+}
+
+void Menu::M_destroy(Stock* st) {
+	st->Delete_stock();
+}
+
+void Menu::M_Fprint_status(Stock* st) {
+	std::string f_name;
+	std::cout << "Введите название файла: " << std::endl;
+	std::cin >> f_name;
+	st->Stock_printf(f_name);
+}
+
+void Menu::M_Fadd_stock(Stock* st) {
+	std::string f_name;
+	std::cout << "Введите название файла: " << std::endl;
+	std::cin >> f_name;
+	st->Stock_status_F(f_name);
 }
 
 int Menu::Input_for_menu(int stat) {
@@ -118,13 +151,13 @@ int Menu::Input_for_menu(int stat) {
 			std::cout << "Повторите ввод :" << std::endl;
 		}
 	}
-	if (stat == 1 && (choice > 7 || choice < 0)) {
+	if (stat == 1 && (choice > 11 || choice < 0)) {
 		std::cout << "Повторите ввод :" << std::endl;
 		choice = Input_for_menu(1);
 	}
 	if (stat == 2 && choice != 1 && choice != 0) {
 		std::cout << "Повторите ввод :" << std::endl;
-		choice =Input_for_menu(2);
+		choice = Input_for_menu(2);
 	}
 	if (stat == 3 && (choice <= 0 || choice > 10000)) {
 		std::cout << "Повторите ввод :" << std::endl;

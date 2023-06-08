@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
-#include <string.h>
+#include <string>
 
 #define MAX 10
 
@@ -44,14 +45,19 @@ public:
 
 class Stock {
 private:
+	std::string name;
 	Section sect[MAX]{};
 	int count;
 public:
 	Stock();
 	bool Is_Empty();
 	bool Is_Full();
-	void Add_section(int section_id);
+	void Add_section(int section_id, bool fl);
 	int Find_section(int section_id);
+	void Set_name(std::string n);
+	void Stock_status_F(const std::string filename);
+	void Stock_printf(const std::string filename);
+	void Delete_stock();
 	void Stock_status();
 	void Delete_section(int section_id);
 	Section* Ret_section(int section_id);
